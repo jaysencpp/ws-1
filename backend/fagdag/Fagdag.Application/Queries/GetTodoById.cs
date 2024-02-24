@@ -21,7 +21,7 @@ public class GetTodoById(Guid id) : IRequest<QueryTodo>
             if (todo is null)
                 throw new TodoNotFoundException(request.Id);
 
-            return new QueryTodo { Title = todo.Title, Id = todo.Id };
+            return new QueryTodo { Title = todo.Title, Id = todo.Id, State = todo.State};
         }
     }
 }
