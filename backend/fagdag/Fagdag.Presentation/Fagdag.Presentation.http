@@ -1,6 +1,15 @@
 @Fagdag.Presentation_HostAddress = http://localhost:5247
 
-GET {{Fagdag.Presentation_HostAddress}}/weatherforecast/
+POST {{Fagdag.Presentation_HostAddress}}/todos
+Content-Type: application/json
+
+{
+"title": "Foo"
+}
+
+###
+
+GET {{Fagdag.Presentation_HostAddress}}/todos/
 Accept: application/json
 
 ###
