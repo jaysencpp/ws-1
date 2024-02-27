@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Fagdag.Application.Commands;
+﻿using Fagdag.Application.Commands;
 using Fagdag.Application.Queries;
 using Fagdag.Domain.Abstractions;
 using Fagdag.Domain.Exceptions;
@@ -10,6 +6,10 @@ using Fagdag.Presentation.RequestModels;
 using Fagdag.Presentation.ViewModels;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace FagdagAPI.Controllers;
 

@@ -8,10 +8,10 @@ namespace Fagdag.Infrastructure;
 
 public static class DependencyInjection
 {
-   public static IServiceCollection AddInfrastructureServices(this IServiceCollection services)
-   {
-      services.AddDbContext<TodoDbContext>(options => options.UseInMemoryDatabase("TodoDb"));
-      services.AddTransient<IMailSender, MailSenderV2>();
-      return services;
-   } 
+    public static IServiceCollection AddInfrastructureServices(this IServiceCollection services)
+    {
+        services.AddDbContext<TodoDbContext>(options => options.UseInMemoryDatabase("TodoDb"));
+        services.AddTransient<IMailSender, MailSenderV2>();
+        return services;
+    }
 }

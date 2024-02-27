@@ -1,5 +1,5 @@
-﻿using System.Threading.Tasks;
-using Fagdag.Domain.Abstractions;
+﻿using Fagdag.Domain.Abstractions;
+using System.Threading.Tasks;
 
 namespace Fagdag.Infrastructure.Services;
 

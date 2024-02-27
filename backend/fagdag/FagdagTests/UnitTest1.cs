@@ -1,7 +1,7 @@
-using System;
 using Fagdag.Domain.Entities;
 using Fagdag.Domain.Enums;
 using FluentAssertions;
+using System;
 using Xunit;
 
 namespace FagdagTests;

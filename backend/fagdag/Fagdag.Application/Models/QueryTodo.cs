@@ -1,5 +1,5 @@
-﻿using System;
-using Fagdag.Domain.Enums;
+﻿using Fagdag.Domain.Enums;
+using System;
 
 namespace Fagdag.Application.Models;
 

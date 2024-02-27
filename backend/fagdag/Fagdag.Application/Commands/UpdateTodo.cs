@@ -1,9 +1,9 @@
-﻿using System;
-using System.Threading;
-using System.Threading.Tasks;
-using Fagdag.Application.Queries;
+﻿using Fagdag.Application.Queries;
 using Fagdag.Infrastructure.Data.Context;
 using MediatR;
+using System;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Fagdag.Application.Commands;
 
@@ -11,10 +11,10 @@ public class UpdateTodo(Guid todoId, string? title, string? state) : IRequest
 {
     public Guid TodoId { get; set; } = todoId;
     public string? Title { get; set; } = title;
-    
+
     //TODO: Make this property private
     public string? State { get; set; } = state;
-    
+
     public class Handler(TodoDbContext ctx, ISender mediator) : IRequestHandler<UpdateTodo>
     {
         public async Task Handle(UpdateTodo request, CancellationToken cancellationToken)
@@ -29,7 +29,7 @@ public class UpdateTodo(Guid todoId, string? title, string? state) : IRequest
 
             if (!string.IsNullOrEmpty(request.State))
             {
-                if(Enum.TryParse(request.State, out Domain.Enums.State parsedState))
+                if (Enum.TryParse(request.State, out Domain.Enums.State parsedState))
                 {
                     //TODO: Extract Method for these two if checks
                     if (todo.State == Domain.Enums.State.Done)
